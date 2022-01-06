@@ -1,5 +1,6 @@
 package com.noorteck.qa.test;
 
+import org.apache.hc.core5.util.Asserts;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.asserts.SoftAssert;
 
@@ -96,6 +97,7 @@ public class AddressBookTest extends ObjInitialize {
 			System.out.println("Not verified");
 		}	
 		// Verify Addresses table displays state name you entered in step 12
+	   softAssert.assertAll();
 		String Expected_state = addressObj.stateDisplayedState();
 		String Actual_state = "VA";
 		if((Actual_state).equalsIgnoreCase(Expected_state)){
